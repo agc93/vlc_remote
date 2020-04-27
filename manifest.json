@@ -1,8 +1,0 @@
-{
-  "domain": "vlc_remote",
-  "name": "VLC media player remote",
-  "documentation": "",
-  "requirements": [],
-  "dependencies": [],
-  "codeowners": []
-}

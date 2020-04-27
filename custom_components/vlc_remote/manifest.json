@@ -1,0 +1,8 @@
+{
+  "domain": "vlc_remote",
+  "name": "VLC Media Player Remote",
+  "documentation": "https://github.com/agc93/vlc_remote",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": []
+}

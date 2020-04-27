@@ -1,23 +1,39 @@
-# vlc_remote
-Home assistant interface using VLC's HTTP API for controlling VLC on a remote box.
+[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/agc93/vlc_remote)
 
-Initial version borrowed heavily from Squeezebox setup by Kingo55.
-Added play_media url option by gambalaya (required for HA text to speech).
+# Remote VLC Media Control Component
 
-No documentation yet. Simply:
+Home Assistant custom component using VLC's HTTP API for controlling a remote instance of VLC Media Player.
 
-1. Enable HTTP interface in VLC, taking note of user/pass and port.
+> Enable HTTP interface in VLC before setting up this component, taking note of username/password and configured port.
 
-2. Add the following under "media_player":
-```
+## Installation
+
+#### Option 1: (recommended)
+This repository is compatible with the Home Assistant Community Store ([HACS](https://community.home-assistant.io/t/custom-component-hacs/121727)).
+
+After installing HACS, add this repo as a custom repository from the Settings screen, and use the ```configuration.yaml``` example below.
+
+#### Option 2: (manual)
+
+Download this repository as a zip file, and place the vlc_remote directory in your config/custom_components/ directory.
+
+Configure according to the following example and restart Home Assistant.
+
+```yaml
+media_player:
   - platform: vlc_remote
-    host: 192.168.0.2
+    host: 192.168.0.x
     port: 8080
     name: "HTPC VLC" # Optional
     username: "something" # Optional
     password: "xyz" # Optional
 ```
-3. Copy integration files to <homeassistant config directory>\custom_components\vlc_remote
+    
+## Changelog
+
+- Initial version borrowed heavily from Squeezebox setup by Kingo55.
+- Added play_media url option by gambalaya (required for HA text to speech).
+- HACS-friendly repo changes by agc93
 
 To Do:
  - Async
